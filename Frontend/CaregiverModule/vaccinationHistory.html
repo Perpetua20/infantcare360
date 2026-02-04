@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vaccinationHistory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+</head>
+<body>
+    <section>
+  <section class="dashboard">
+    <div class="logo-part">
+      <div class="logo">
+        <img src="../Images/infantCareLogo.png" alt="">
+        <h3>InfantCare360</h3>
+      </div>
+      <i class="fa-solid fa-bars"></i>
+    </div>
+<div class="features">
+    <li class="home"><i class="fa-solid fa-grip dashboardIcon"></i> <a href="./caregiverDashboard.html" class="link1">Dashboard</a></li>
+    <li class="infantProfile"><i class="fa-solid fa-user infant"></i> <a href="./infantProfile.html" class="link2">Infant Profile</a></li>
+    
+<li class="menu-item vaccine">
+    <div class="menu-header">
+        <i class="fa-solid fa-syringe syringe"></i>
+        <span>Vaccination Tracking</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+    </div>
+
+    <ul class="submenu">
+        <li><a href="./vaccinationSchedule.html">Vaccination Schedule</a></li>
+        <li><a href="./vaccinationHistory.html">Vaccination History</a></li>
+    </ul>
+</li>
+
+<li class="menu-item educate">
+    <div class="menu-header">
+        <i class="fa-solid fa-book book"></i>
+        <span>Education Resources</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+    </div>
+
+    <ul class="submenu">
+        <li><a href="education.html?topic=1">Breastfeeding</a></li>
+        <li><a href="education.html?topic=2">Infant Nutrition</a></li>
+        <li><a href="education.html?topic=3">Hygiene</a></li>
+        <li><a href="education.html?topic=4">Disease Prevention</a></li>
+    </ul>
+</li>
+
+    
+    <li class="consult"><i class="fa-solid fa-video video"></i><a href="./telehealthModule.html" class="link2">Telehealth Consultation</a></li>
+   
+    <div class="dashboardLogOut">
+        <button class="logoutBtn">Log Out</button>
+    </div>
+</div>
+  </section>
+
+
+         <div class="mainContent">
+             <div class="header">
+                        <div class="text">
+                          <h1>Vaccination History</h1>
+                          <p>View all vaccines administered for Baby Max.</p>
+                      </div>
+
+                      <div class="profile">
+                         <img src="../Images/infantProfile.png" alt="">
+                        <button class="logoutBtn">Log out</button>
+                      </div>
+            </div>
+
+        
+        <div class="historyContainer">
+                <div class="topCards">
+                            <div class="card card1">
+                                <i class="fa-solid fa-shield"></i>
+
+                                <div class="text progress">
+                                  <h4></h4>
+                                  <div class="progressBar"></div>
+                                   <p></p>
+                                 
+                                </div>
+                                
+                            </div>
+
+                            <div class="card card2">
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <div class="text">
+                                         <h4></h4> 
+                                         <p></p>
+                                         <p></p>
+                                          <p></p>
+                                </div>
+                                 
+                            </div>
+
+                            <div class="card card3">
+                                  <i class="fa-solid fa-calendar-days"></i>
+                                <div class="text" id="nextDoseInfo">
+                                  <!-- populated dynamically -->
+                                </div>
+                               
+                            </div>
+                        </div>
+
+               </div>
+
+                <div class="vaccineHistoryContainer">
+                     <h3>Administered Vaccines</h3>
+
+                     <div class="vaccineHistory">
+    
+                     </div>       
+                     
+               </div>
+         </div>
+    </div>
+    </section>
+    <script src="vaccinationHistory.js"></script>
+</body>
+</html>

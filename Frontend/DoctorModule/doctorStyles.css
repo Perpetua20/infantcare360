@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+  cursor: pointer;
+}
+body{
+     background-color: rgb(239, 238, 238);
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 5%;
+}
+.dashboard{
+       position: relative;
+       background-color:rgb(31, 31, 98);
+       display: flex;
+       flex-direction: column; 
+       justify-content: center;
+       height: 100vh;
+}
+.logo-part{
+     position: absolute;
+     top: 2%;
+     width: 100%;
+     display: flex;
+     left: 4%;
+}
+.logo-part .logo{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: rgb(233, 231, 231);
+}
+.logo-part img{
+     width: 50px;
+     height: 50px; 
+     border-radius: 50%;
+}
+.logo-part i{
+    display: none;
+}
+.dashboard .features li{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 25px 0px 20px 25px;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    position: relative;
+}
+.dashboard .features li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background-color: #495057;
+}
+.dashboard .features li a{
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+ 
+}
+.dashboard .features li i{
+    color: white;
+    font-size: 20px;
+}
+.dashboard .features li:hover {
+    background-color: #2f3e78;
+    border-left: 5px solid #4f6eef; 
+    padding-left: 20px; 
+    cursor: pointer;
+}
+.dashboard .features .caregivers{
+     background-color: #2f3e78;
+}
+.dashboard .dashboardLogOut{
+    display: none;
+}
+.mainContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+
+}
+.mainContent .text{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: rgb(98, 98, 98);
+}
+.mainContent .text h1{
+    color: rgb(0, 0, 139);
+}
+.logOut{
+    position: absolute;
+    right: 5%;
+    top: 1%;
+}
+.logOut button{
+      padding: 8px 35px;
+      border-radius: 30px;
+      border: none;
+      background-color: #a80303;
+      color: rgb(226, 226, 226);
+      cursor: pointer;
+}
+.mainContent .logOut button:hover{
+  background-color: rgb(0, 0, 139);
+}
+.upcomingPast{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-top: 2%;
+}
+.vaccines{
+     background-color: rgba(170, 112, 4, 0.9);
+    width: 70%;
+    padding: 20px;
+    line-height: 1.5;
+      color: rgb(212, 212, 212);
+     border-radius: 10px;
+     margin-bottom: 4%;
+}
+.vaccines span{
+    color: rgb(230, 229, 229);
+}
+.overdueVaccines{
+     margin-bottom: 0%;
+      padding:8px 20px;
+       background-color: rgba(195, 50, 50,0.9);
+}
+.upcomingPast h3{
+    margin-bottom: 2%;
+    background-color: rgb(2, 2, 133);
+     color: rgb(238, 238, 238);
+     padding:4px 6px;
+     width: 40%;
+     text-align: center;
+     border-radius: 8px;  
+}
+#pastVaccinesTable h3{
+      width: 20%;
+}
+table{
+    background-color: #a80303;
+    width: 95%;
+    padding: 5px ;
+    border-collapse: collapse;
+}
+
+thead{
+   background-color:rgb(30, 30, 129);
+}
+th{
+    padding: 6px;
+    text-align: start;
+    color: rgb(226, 226, 226);
+}
+.actionHeading{
+    text-align: center;
+}
+
+tr td{
+    padding: 6px;
+    
+}
+tbody tr{
+    background-color: rgb(187, 221, 253);
+     color: rgb(44, 44, 44);
+}
+tbody tr button{
+    padding: 3px 14px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(221, 219, 219);
+}
+tbody tr button:hover{
+    transform: translateY(-2px);
+}
+tbody tr .actions{
+    display: flex;
+    justify-content: center;
+    gap: 7%;
+}
+tr:nth-child(even) {
+      background-color: #dce5ef;
+}
+
+.navivagationsBtns{
+    width: 90%;
+    margin-top: 1%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+.navivagationsBtns button{
+    padding: 4px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(2, 2, 196);
+    color: rgb(239, 236, 236);
+}
+.navivagationsBtns button:hover{
+    background-color: blue;
+}
+#infantIdentificationForm h3{
+    margin-bottom: 2%;
+      color: rgb(0, 0, 139);
+}
+.detailsForm{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    color: rgb(81, 81, 81);
+}
+
+input, select, textarea { 
+    width: 100%; 
+    padding: 6px; 
+    margin-top: 5px; 
+    border-radius: 4px; 
+    border: 1px solid #ccc;
+ }
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+    justify-content: center; 
+    align-items: center; 
+    color: #555;
+}
+.modal h3{
+    color: rgb(0, 0, 139);
+    margin-bottom: 3%;
+}
+.modal-content { 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    width: 400px; 
+    max-width: 90%; 
+    position: relative; 
+}
+.close-btn {
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 30px; 
+    cursor: pointer; 
+    color: #555; 
+}
+.close-btn:hover { 
+    color: #000; 
+}
+#infantSummary { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+    color: #555;
+}
+button {
+     margin-top: 15px; 
+     padding: 8px 16px; 
+     border: none; 
+     background-color: rgb(0, 0, 139);
+     color: white; 
+     border-radius: 4px; 
+     cursor: pointer; 
+}
+button:hover { 
+   background-color:rgb(22, 22, 214);
+}

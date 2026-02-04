@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="adminDashboard.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <section>
+            <div class="dashboard">
+             <div class="logo-part">
+                 <div class="logo">
+                    <img src="../Images/infantCareLogo.png" alt="">
+                    <h3>InfantCare360</h3>
+                </div>
+                 <i class="fa-solid fa-bars"></i>
+            </div>
+ 
+                <div class="features">
+                     <li class="home"><i class="fa-solid fa-grip dashboardIcon"></i> <a href="#" class="link1">Dashboard</a></li>
+                     <li class="doctors"><i class="fa-solid fa-stethoscope"></i><a href="./manageDoctors.html" class="link2">Manage Doctors</a></li>
+                     <li class="caregivers"><i class="fa-solid fa-user"></i><a href="./manageCaregiver.html" class="link2">Manage Caregivers</a></li>
+                     <li class="invitations"> <i class="fa-solid fa-syringe"></i><a href="./caregiverInvitations.html" class="link2">Caregivers Invitations</a></li>
+                     
+
+                       <div class="dashboardLogOut">
+                          <button class="logoutBtn">Log Out</button>
+                       </div>
+                </div>
+          </div>
+
+          <div class="mainContent">
+
+               <div class="logOut">
+                    <button class="logoutBtn">Log Out</button>
+                </div>
+
+                <div class="text">
+                      <h1>Hello Admin</h1>
+                      <h1>Welcome to InfantCare360 Dashboard</h1>
+                      <p>Your central control for managing doctors, caregivers, and infant health operations.</p>
+               </div>    
+
+               <div class="contentContainer">
+
+                    <h3 class="cardsTitle">Here’s a quick summary of your system’s current activity.</h3>
+                    <div class="cards">
+
+                        <div class="card">
+                             <p class="icon"><i class="fa-solid fa-user-doctor"></i></p>
+                            <h3>Total Doctors</h3>
+                             <p class="count"></p>
+                             <p>Registered doctors in the system</p>
+                        </div>
+
+                        <div class="card">
+                            <p class="icon"><i class="fa-solid fa-users"></i></p>
+                            <h3>Total Caregivers</h3>
+                             <p class="count"></p>
+                             <p>Registered caregivers in the system</p>
+                        </div>
+
+                        <div class="card">
+                            <p class="icon"><i class="fa-solid fa-baby"></i></p>
+                            <h3>Total Infants</h3>
+                             <p class="count"></p>
+                             <p>Registered infants in the system</p>
+                        </div>
+
+                        <div class="card">
+                            <p class="icon"> <i class="fa-solid fa-video"></i></p>
+                             <h3>Pending Telehealth Consultations</h3>
+                             <p class="count"></p>
+                             <p>Appointments waiting for doctor approval</p>
+                        </div>
+
+                        <div class="card">
+                                <p class="icon"><i class="fa-solid fa-user-plus"></i></p>
+                                <h3>New Registrations</h3>
+                                <p class="count"></p>
+                                <p>Caregivers & infants registered in the last 7 days</p>
+                        </div>
+
+                        <div class="card">
+                            <p class="icon"><i class="fa-solid fa-circle-check"></i></p>
+                            <h3>Completed Vaccinations</h3>
+                            <p class="count"></p>
+                            <p>Vaccinations successfully administered in the last 7 days</p>
+                        </div>
+
+                    </div>
+
+               </div>
+          </div>
+
+    </section>
+        
+<script src="adminDashboard.js"></script>
+</body>
+</html>

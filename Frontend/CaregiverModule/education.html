@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title id="page-title">Education</title>
+  <link rel="stylesheet" href="education.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<section class="container">
+
+  <section class="dashboard">
+    <div class="logo-part">
+      <div class="logo">
+        <img src="../Images/infantCareLogo.png" alt="">
+        <h3>InfantCare360</h3>
+      </div>
+      <i class="fa-solid fa-bars"></i>
+    </div>
+<div class="features">
+    <li class="home"><i class="fa-solid fa-grip dashboardIcon"></i> <a href="./caregiverDashboard.html" class="link1">Dashboard</a></li>
+    <li class="infantProfile"><i class="fa-solid fa-user infant"></i> <a href="./infantProfile.html" class="link2">Infant Profile</a></li>
+    
+<li class="menu-item vaccine">
+    <div class="menu-header">
+        <i class="fa-solid fa-syringe syringe"></i>
+        <span>Vaccination Tracking</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+    </div>
+
+    <ul class="submenu">
+        <li><a href="./vaccinationSchedule.html">Vaccination Schedule</a></li>
+        <li><a href="./vaccinationHistory.html">Vaccination History</a></li>
+    </ul>
+</li>
+
+<li class="menu-item educate">
+    <div class="menu-header">
+        <i class="fa-solid fa-book book"></i>
+        <span>Education Resources</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+    </div>
+
+    <ul class="submenu">
+        <li><a href="education.html?topic=1">Breastfeeding</a></li>
+        <li><a href="education.html?topic=2">Infant Nutrition</a></li>
+        <li><a href="education.html?topic=3">Hygiene</a></li>
+        <li><a href="education.html?topic=4">Disease Prevention</a></li>
+    </ul>
+</li>
+
+    
+    <li class="consult"><i class="fa-solid fa-video video"></i><a href="./telehealthModule.html" class="link2">Telehealth Consultation</a></li>
+   
+    <div class="dashboardLogOut">
+        <button class="logoutBtn">Log Out</button>
+    </div>
+</div>
+  </section>
+
+  <section class="contentContainer">
+    <div class="logOut logoutBtn">
+      <button>Log Out</button>
+    </div>
+
+    <div class="introPart">
+      <div class="intro-text">
+        <div class="text-part">
+          <h1 id="intro-title"></h1>
+          <p id="intro-text"></p>
+          <p class="cta-text" id="cta-text"></p>
+        </div>
+        <button class="cta-btn" id="start-btn">Start Learning</button>
+      </div>
+
+      <div class="intro-image">
+        <img src="../Images/breastfeeding.jpg" alt="" id="intro-image">
+      </div>
+    </div>
+
+    <section id="explore-section">
+      <h2 class="section-heading" id="explore-heading"></h2>
+      <div id="subtopics-container"></div>
+    </section>
+  </section>
+
+</section>
+
+<script src="education.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Caregiver Invitation</title>
+  <style>
+    body {
+      font-family: Poppins, sans-serif;
+      background: #f4f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 450px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #555;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Invite Caregiver</h2>
+    <form id="inviteForm">
+      <label>Caregiver Name</label>
+      <input type="text" id="caregiverName" required>
+
+      <label>Caregiver Email</label>
+      <input type="email" id="caregiverEmail" required>
+
+      <label>Infant Name</label>
+      <input type="text" id="infantName" required>
+
+      <label>Infant Date of Birth</label>
+      <input type="date" id="infantDob" required>
+
+      <label>Infant Gender</label>
+      <select id="infantGender" required>
+        <option value="">Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <button type="submit">Send Invitation</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('inviteForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert("Invitation sent successfully! (Frontend demo only)");
+    });
+  </script>
+</body>
+</html>

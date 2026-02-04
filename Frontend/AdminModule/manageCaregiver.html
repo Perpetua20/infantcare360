@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="manageCaregiver.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <section>
+          <div class="dashboard">
+             <div class="logo-part">
+                 <div class="logo">
+                    <img src="../Images/infantCareLogo.png" alt="">
+                    <h3>InfantCare360</h3>
+                </div>
+                 <i class="fa-solid fa-bars"></i>
+            </div>
+
+                <div class="features">
+                     <li class="home"><i class="fa-solid fa-grip dashboardIcon"></i> <a href="./adminDashboard.html" class="link1">Dashboard</a></li>
+                     <li class="doctors"><i class="fa-solid fa-stethoscope"></i><a href="./manageDoctors.html" class="link2">Manage Doctors</a></li>
+                     <li class="caregivers"><i class="fa-solid fa-user"></i><a href="#" class="link2">Manage Caregivers</a></li>
+                     <li class="invitations"> <i class="fa-solid fa-syringe"></i><a href="./caregiverInvitations.html" class="link2">Caregivers Invitations</a></li>
+                     
+
+                       <div class="dashboardLogOut">
+                          <button class="logoutBtn">Log Out</button>
+                       </div>
+                </div>
+          </div>
+
+          <div class="mainContent">
+                 <div class="logOut">
+                    <button class="logoutBtn">Log Out</button>
+                </div>
+
+                <div class="text">
+                      <h1>Manage Infants' Caregivers</h1>
+                       <p>View and manage caregiver profiles linked to infants in the system.</p>
+               </div>  
+               
+               <div class="contentContainer">
+
+                <div class="topSection">
+
+                    <a href="registerCaregiver.html">
+                        <button>Register Caregiver</button>
+                     </a>
+        
+                  <div class="searchCon">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search caregiver by email or name">   
+                    </div>
+                    <button>Search</button>
+                </div>
+
+                </div>
+
+                <div class="caregiverList">
+                    <h2>List of all caregivers </h2>
+                       <table>
+                            <thead>
+                                <tr>
+                                <th>ID</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Infant Name(s)</th>
+                                <th>Relationship to Infant</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="caregiverTableBody"></tbody>
+                            </table>
+
+                            <div class="pagination navivagationsBtns">
+                                    <button id="prevBtn">Previous</button>
+                                    <span id="pageInfo"></span>
+                                    <button id="nextBtn">Next</button>
+                            </div>
+                    
+
+                </div>
+            
+               </div>
+
+          </div>
+
+      </section>
+
+      <script src="manageCaregiver.js"></script>
+</body>
+</html>

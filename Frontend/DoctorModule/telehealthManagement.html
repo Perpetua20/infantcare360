@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Telehealth Dashboard</title>
+  <link rel="stylesheet" href="./telehealthManagement.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://meet.jit.si/external_api.js"></script>
+</head>
+
+<body>
+  <div id="jitsi-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000000cc; z-index:1000;">
+     <div id="jitsi-container" style="width:100%; height:100%;"></div>
+     <button id="leave-meeting-btn" style="position:absolute;top:10px;right:10px;z-index:10;">Leave Meeting</button>
+</div>
+
+
+  <section>
+     <div class="dashboard">
+      <div class="logo-part">
+        <div class="logo">
+          <img src="../Images/infantCareLogo.png" alt="">
+          <h3>InfantCare360</h3>
+        </div>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="features">
+        <li class="home"><i class="fa-solid fa-grip dashboardIcon"></i> <a href="./doctorDashboard.html" class="link1">Dashboard</a></li>
+        <li class="infants"><i class="fa-solid fa-baby"></i><a href="./manageInfants.html" class="link2">Infants</a></li>
+        <li class="vaccinations"><i class="fa-solid fa-syringe"></i><a href="./vaccinationManagement.html" class="link2">Vaccination Management</a></li>
+        <li class="consultations"><i class="fa-solid fa-video"></i><a href="#" class="link2">Telehealth Consultations</a></li>
+        
+
+        <div class="dashboardLogOut">
+          <button id="logoutBtn" class="logoutBtn">Log Out</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =================== MAIN CONTENT =================== -->
+    <div class="mainContent">
+              <div class="logOut">
+                    <button id="logoutBtnTop" class="logoutBtn">Log Out</button>
+               </div>
+
+            <div class="contentContainer">
+                  <div class="text">
+                      <h1>Telehealth Consultations</h1>
+                      <p>Manage, approve and conduct caregiver consultations</p>
+                  </div>
+                
+          <!---============= NAV LINKS FOR MODULE SECTIONS ============= --->
+                <div class="linksContainer">
+                    <p class="pendingMeeting"><i class="fa-solid fa-hourglass-half"></i> Pending Meetings</p>
+                    <p class="upcomingMeeting"><i class="fa-solid fa-calendar-days"></i>Upcoming Meetings</p>
+                     <p class="overdueMeeting"><i class="fa-solid fa-calendar-days"></i>Overdue Meetings</p>
+                    <p class="pastMeeting"><i class="fa-solid fa-folder"></i>Past Meetings</p>
+                    <p class="canceledMeeting"><i class="fa-solid fa-ban"></i> Canceled Meetings</p>
+
+                </div>
+              <div class="linkDetailsContainer">
+
+             <!--===============  PENDING REQUESTS SECTION  =======================-->
+                    <div class="pendingCon">
+                      <h2>Pending Consultation Requests</h2>
+                      <div class="pending">
+                            <!-- Pending meetings will be dynamically added here -->
+                      </div>
+                    </div>
+                      
+                <!--================  UPCOMING CONSULTATIONS ==========================-->
+                      <div class="upcomingCon">
+                        <h2>Your Upcoming Consultations</h2>
+                        <div class="upcoming">
+                           <!-- Upcoming meetings will be dynamically added here -->
+                        </div>
+                      </div>
+
+        <!--===================  OVERDUE CONSULTATIONS  =======================-->
+                        <div class="overdueCon">
+                          <h2>Overdue Consultations</h2>
+                          <div class="overdue">
+                             <!-- Overdue meetings will be dynamically added here -->
+                          </div>
+                        </div>
+                       
+         <!--===================  PAST CONSULTATIONS  =======================-->
+                        <div class="pastCon">
+                          <h2>Past Consultations</h2>
+                          <div class="past">
+                             <!-- Past meetings will be dynamically added here -->
+                          </div>
+                        </div>
+                      
+        <!--===================  CANCELED CONSULTATIONS  =======================-->
+                        <div class="canceledCon">
+                            <h2>Canceled Consultations</h2>
+                            <div class="canceled">
+                                <!-- Cancelled meetings will be dynamically added here -->
+                            </div>
+                      </div>
+
+           </div>
+    </div>
+  </div>
+
+   </section>
+
+  <script src="telehealthManagement.js"></script>
+</body>
+</html>

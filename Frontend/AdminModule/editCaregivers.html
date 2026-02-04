@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Caregiver | InfantCare360 Admin</title>
+  <link rel="stylesheet" href="registerCaregister.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    
+
+    <div class="caregiverDetails">
+      <h2 class="form-title text-center">Register Caregiver & Infant</h2>
+
+      <form id="caregiverForm">
+      <!-- Caregiver Section -->
+       <h3 class="section-title">Caregiver Details</h3>
+          <section class="caregiver">
+                    <div class="form-group">
+                      <label for="caregiver_full_name" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="caregiver_full_name" placeholder="Enter caregiver name" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email Address</label>
+                      <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="text" class="form-control" id="phone" placeholder="+254..." required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="relationship_to_infant" class="form-label">Relationship to Infant</label>
+                      <select id="relationship_to_infant" required>
+                        <option value="">Select relationship</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Father">Father</option>
+                        <option value="Guardian">Guardian</option>
+                      </select>
+                    </div>
+
+          </section>
+                  
+
+      <!-- Infant Section -->
+        <h3 class="section-title">Infant Details</h3>
+          <section class="infant">
+
+                      <div class="form-group">
+                        <label for="infant_full_name" class="form-label">Infant Full Name</label>
+                        <input type="text" class="form-control" id="infant_full_name" placeholder="Enter infant name" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="date_of_birth" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="date_of_birth" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select id="gender" required>
+                          <option value="">Select gender</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                      </div>
+
+                    <div class="form-group">
+                        <label for="weight">Birth Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="Enter birth weight" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="doctor_id" class="form-label">Assign Doctor</label>
+                        <select id="doctor_id" required>
+                            <option value="">Select a doctor</option>
+                            <!-- Options will be dynamically loaded from backend -->
+                        </select>
+                    </div>
+
+                      <div class="form-group">
+                        <label for="facility">Registered Facility</label>
+                        <input type="text" id="facility" placeholder="Enter health facility name" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="facility_contact">Facility Contact</label>
+                        <input type="tel" id="facility_contact" placeholder="Enter facility contact number" required>
+                      </div>
+
+         </section>
+      
+       <br>
+
+      <div class="btnsCon">
+         <button type="button" class="btn-primary cancel" id="cancelButton">Cancel</button>
+          <button type="submit" class="btn-primary">Update Caregiver</button>
+      </div>
+
+    </form>
+    </div>
+
+  <script src="editCaregivers.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     background-color: rgb(250, 250, 250);
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 5%;
+    position: relative;
+}
+.dashboard{
+       position: sticky;
+       top: 0; 
+       background-color:rgb(31, 31, 98);
+       display: flex;
+       flex-direction: column; 
+       justify-content: center;
+       height: 100vh;
+}
+.logo-part{
+     position: absolute;
+     top: 2%;
+     width: 100%;
+     display: flex;
+     left: 4%;
+}
+.logo-part .logo{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: rgb(233, 231, 231);
+}
+.logo-part img{
+     width: 50px;
+     height: 50px; 
+     border-radius: 50%;
+}
+.logo-part i{
+    display: none;
+}
+.dashboard .features li {
+    list-style: none;
+    padding: 0px; 
+    display: flex;
+    gap: 0;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    position: relative;
+}
+.dashboard .features .home ,.dashboard .features .infantProfile, .dashboard .features .consult{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+}
+.dashboard .features li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background-color: #495057;
+}
+.dashboard .features li a{
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+ 
+}
+.dashboard .features li .link1, .dashboard .features li .link2 {
+    margin-left: 8%;
+}
+.dashboard .features li i{
+    color: white;
+    font-size: 20px;
+}
+.dashboard .features li:hover {
+    background-color: #2f3e78;
+    border-left: 5px solid #4f6eef; 
+    cursor: pointer;
+}
+.dashboard .features .educate{
+     background-color: #2f3e78;
+}
+.dashboard .features .educate.active{
+     background-color:rgb(31, 31, 98);
+}
+.dashboard .dashboardLogOut{
+    display: none;
+}
+
+/* ---------- SIDEBAR DROPDOWN STYLES ---------- */
+.menu-item {
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .features li a,
+.menu-item .menu-header {
+    padding: 20px 14px 20px 14px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.menu-item .menu-header {
+    background-color: transparent; 
+    display: flex;
+    padding-left: 0%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-header span,
+.menu-header a {
+    color: rgb(222, 222, 222);
+    text-decoration: none;
+}
+
+.menu-item .arrow {
+    transition: transform 0.3s ease;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #2f3e78;
+    transition: max-height 0.35s ease;
+}
+
+.submenu li {
+    padding: 2px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+    margin-left: 19%;
+}
+
+.dashboard .features .submenu li:hover {
+    background-color: #5e0101;
+}
+
+.menu-item.open .submenu {
+    max-height: 400px;
+}
+
+.menu-item.open .arrow {
+    transform: rotate(180deg);
+}
+.logOut{
+    position: fixed;
+    right: 5%;
+    top: 3%;
+}
+.logOut button , .cta-btn{
+      padding: 8px 35px;
+      border-radius: 30px;
+      border: none;
+      background-color: #a80303;
+      color: rgb(226, 226, 226);
+      cursor: pointer;
+}
+.logOut button:hover, .cta-btn:hover{
+  background-color: rgb(0, 0, 139);
+}
+.image{
+    margin-top: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  rgb(232, 232, 233);
+}
+.image .Imagetext{
+    text-align: center;
+}
+.text h3{
+    color: rgb(0, 0, 139);
+}
+.text .heading {
+     color: rgb(0, 0, 139);
+    text-align: center;
+    margin-top: 1%;
+}
+.overview-text{
+    margin: 1% 20%;
+     text-align: center;
+}
+.info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5%;
+    padding-right: 5%;
+}
+.info .card{
+    background-color: white;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    padding: 18px 20px;
+    line-height: 1.5;     
+    border-radius: 10px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     transition: all 0.2s ease-in-out;
+}
+.card:hover, .card2:hover , .card3:hover{
+    box-shadow: 0 6px 18px rgba(9, 53, 248, 0.15);
+    cursor: pointer;
+    transform: translateY(-10px); 
+}
+.card .list{
+    position: relative;
+    padding-left: 40px;
+    
+}
+.card .list::before {
+    content: "✔";           
+    color: rgb(223, 8, 87);  
+    background-color: rgb(240, 163, 177);    
+    padding: 6px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;       
+    line-height: 1;
+    border-radius: 70px 25px 60px 55px;
+}
+.card .list:hover::before , .card2 .list:hover::before ,.card3 .list:hover::before{
+    color: white;                   
+    background-color: rgb(223, 8, 87); 
+    transform: scale(1.2);      
+}
+.card p , .card2 .list , .card3 .list{
+    color: #495057;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+.card h3{
+    margin-bottom: 3%;
+}
+#lesson-navigation {
+    display: flex;
+    justify-content: center;
+    margin-right: 7%;
+    margin-bottom: 15px;
+    gap: 5%;
+}
+
+.nav-btn {
+    padding: 5px 10px;
+    background-color: #0505a4 ; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+      background-color: #a80303;
+}
+
+.nav-btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3%;
+    margin: 3% 5% 3% 0%;
+}
+.cards h3{
+    margin-bottom: 3px;
+}
+.card2 , .card3{
+    background-color: white;
+    padding: 15px 20px;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    padding: 18px 20px;
+    line-height: 1.5;     
+    border-radius: 10px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     transition: all 0.2s ease-in-out;
+}
+.card2 .list , .card3 .list{
+    position: relative;
+    padding-left: 40px;
+    line-height: 1.2;
+    padding-bottom: 5px;
+}
+.card2 .list::before, .card3 .list::before {
+    content: "✔";           
+    color: rgb(223, 8, 87);  
+    background-color: rgb(240, 163, 177);    
+    padding: 6px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;       
+    line-height: 1;
+    border-radius: 70px 25px 60px 55px;
+}
+#lesson-videos{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 0%;
+  padding-left: 2%;
+}
+.card2 ul li{
+ list-style-type: none;
+}
+video{
+    width: 80%;
+    height: auto;
+}
+.videoHeading{
+    width: 55%;
+    text-align: center;
+    margin: 3% auto;
+
+}
+.videoHeading h2{
+     color: rgb(0, 0, 139);
+     margin-bottom: 5px;
+}

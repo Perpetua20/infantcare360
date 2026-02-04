@@ -1,0 +1,508 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     background-color: rgb(250, 250, 250);
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 5%;
+}
+.dashboard{
+       position: sticky;
+       top: 0; 
+       background-color:rgb(31, 31, 98);
+       display: flex;
+       flex-direction: column; 
+       justify-content: center;
+       height: 100vh;
+}
+.logo-part{
+     position: absolute;
+     top: 2%;
+     width: 100%;
+     display: flex;
+     left: 4%;
+}
+.logo-part .logo{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: rgb(233, 231, 231);
+}
+.logo-part img{
+     width: 50px;
+     height: 50px; 
+     border-radius: 50%;
+}
+.logo-part i{
+    display: none;
+}
+.dashboard .features li {
+    list-style: none;
+    padding: 0px; 
+    display: flex;
+    gap: 0;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    position: relative;
+}
+.dashboard .features .home ,.dashboard .features .infantProfile, .dashboard .features .consult{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+}
+.dashboard .features li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background-color: #495057;
+}
+.dashboard .features li a{
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+}
+.dashboard .features li .link1, .dashboard .features li .link2 {
+    margin-left: 8%;
+}
+.dashboard .features li i{
+    color: white;
+    font-size: 20px;
+}
+.dashboard .features li:hover {
+    background-color: #2f3e78;
+    border-left: 5px solid #4f6eef; 
+    cursor: pointer;
+}
+.dashboard .features .home{
+     background-color: #2f3e78;
+}
+.dashboard .features .home.active{
+     background-color:rgb(31, 31, 98);
+}
+.dashboard .dashboardLogOut{
+    display: none;
+}
+.profile .logoutBtn{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+/* ---------- SIDEBAR DROPDOWN STYLES ---------- */
+.menu-item {
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .features li a,
+.menu-item .menu-header {
+    padding: 20px 14px 20px 14px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.menu-item .menu-header {
+    background-color: transparent; 
+    display: flex;
+    padding-left: 0%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-header span,
+.menu-header a {
+    color: rgb(222, 222, 222);
+    text-decoration: none;
+}
+
+.menu-item .arrow {
+    transition: transform 0.3s ease;
+}
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #2f3e78;
+    transition: max-height 0.35s ease;
+}
+
+.submenu li {
+    padding: 2px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+    margin-left: 19%;
+}
+
+.dashboard .features .submenu li:hover {
+    background-color: #5e0101;
+}
+
+.menu-item.open .submenu {
+    max-height: 400px;
+}
+
+.menu-item.open .arrow {
+    transform: rotate(180deg);
+}
+
+
+.mainContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+.mainContent .text{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: rgb(98, 98, 98);
+}
+.mainContent .text h1{
+    color: rgb(0, 0, 139);
+}
+.mainContent .text p{
+    margin-top: 1%;
+}
+.logOut{
+    position: absolute;
+    right: 5%;
+    top: 3%;
+}
+.logOut button{
+      padding: 8px 35px;
+      border-radius: 30px;
+      border: none;
+      background-color: #a80303;
+      color: rgb(226, 226, 226);
+      cursor: pointer;
+}
+.mainContent .logOut button:hover{
+  background-color: rgb(0, 0, 139);
+}
+.contentContainer{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,minmax(140px ,190px));
+    gap: 5%;
+    margin-right: 5%;
+    padding: 20px 15px 50px 15px;
+}
+.cards .card{
+     background-color: white;
+     border-radius: 20px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cards .card:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+.cards .card button:hover{
+    background-color: rgb(0, 0, 139);
+    transition: all 0.3s ease;
+} 
+.profile{
+    padding: 20px 15px;
+    position: relative;
+}
+.profile .details{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    color: rgb(98, 98, 98);
+}
+.profile img{
+    height: 50px;
+}
+.info span{
+    color:  rgb(4, 4, 111);
+    font-weight: 520;
+}
+.profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+.profile .cta{
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+}
+.profile .cta button{
+    padding: 8px 20px; 
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(50, 50, 246);
+    color: white;
+}
+.vaccineTracking{
+    padding: 20px 15px;
+   
+}
+.vaccineTracking h3{
+ color: rgb(4, 4, 111);
+ margin-bottom: 15px;
+}
+.vaccineTracking .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(199, 197, 197);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+.vaccineTracking .bar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background-color: rgb(2, 157, 2);
+  border-radius: 20px;
+  width: var(--progress-width, 0%);
+  transition: width 0.6s ease-in-out;
+}
+.vaccineTracking p{
+    color: rgb(98, 98, 98);
+    margin-top: 5px;
+    line-height: 2;
+    text-align: center;
+}
+.telehealth{
+    padding: 20px 15px;
+  
+}
+.telehealth h3{
+    color: rgb(4, 4, 111);
+    margin-bottom: 15px;
+}
+.telehealth button{
+    padding: 8px 15px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(50, 50, 246);
+    color: white;
+    margin-top: 8%;
+}
+.education{
+    padding: 20px 15px;
+}
+.education h3{
+    color: rgb(4, 4, 111);
+    margin-bottom: 15px;
+}
+.education p{
+    color: rgb(98, 98, 98);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.education button{
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(50, 50, 246);
+    color: white;
+}
+
+.images{
+    margin-right: 5%;
+    border-radius: 30px;
+    background-image: url('./Images/infantVaccination.png');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 9%;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ebf5ff;
+    color: #495057;
+   display: none ;
+}
+.swal2-container {
+  z-index: 99999999 !important; 
+}
+
+.swal-custom-zindex {
+  z-index: 100000000 !important; 
+}
+
+/*===================MEDIA QUERIES=======================*/
+@media (max-width: 600px){
+      
+      section {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    .logo-part{
+        position: fixed;
+        top: 0;
+       left: 0;
+       justify-content: space-between;
+       align-items: center;
+       padding: 3% 5% 3% 2%;
+       background-color:rgb(31, 31, 98);
+       z-index: 100000;
+    } 
+    .logo-part h3{
+        font-size: small;
+    }
+    .logo-part img{
+        height: 30px;
+        width: 30px;
+    }  
+    .logo-part i{
+         display: block;
+         color: white;
+          font-size: 30px;
+      } 
+      .mainContent .logOut{
+          display: none;
+      } 
+      .dashboard {
+        height: 8vh;
+      }
+        .dashboard .dashboardLogOut {
+           display: block;
+           position: fixed; 
+           bottom: 4%;
+           left: -50%;
+           transform: translateX(-50%);
+           z-index: 10001; 
+           transition: left 0.3s ease-in-out;
+       }
+      .dashboard .dashboardLogOut button{
+            padding: 8px 35px;
+            border-radius: 30px;
+            border: none;
+            background-color: #a80303;
+            color: rgb(226, 226, 226);
+            cursor: pointer; 
+      }
+ 
+        .dashboard .features {
+            position: fixed; 
+            width: 100%;
+            top: 8%;
+            padding-top: 20%;
+            background-color: rgb(31, 31, 98);
+            transition: left 0.3s ease-in-out;
+            left: -100%;
+            height: calc(100vh - 8%);
+            z-index: 10000;
+     } 
+        .dashboard .features li {
+          padding: 15px 0px 20px 15px;
+       }
+            .dashboard .features .vaccine{
+            grid-template-rows: 25px 0px;
+        }
+            .dashboard .features .vaccine .menu-header {
+                padding: 0px 30px 0px 10px;
+
+            }
+
+             .mainContent .text{
+                margin-top: -6%; 
+                margin-bottom: 5%;
+                padding: 0% 3%;
+                width: 100%;
+               
+            }
+            .mainContent .text h1{
+                font-size: 25px;
+            }
+          
+            .contentContainer{
+                grid-template-columns: 1fr;
+                grid-template-areas: 'images'
+                'cards';
+            }
+                .images{
+                    width: 90%;
+                    height: 250px;
+                    grid-area: images;
+                    margin: auto;
+                }
+                .cards{
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(4, 180px);
+                grid-area: cards;
+                margin:5% 0;
+                gap: 3%;
+                }
+
+                .footer-bottom {
+                display: block;
+                margin-top: 5%;
+                }
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px){
+    section{
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        height: auto;
+        gap: 2%;
+        position: relative;
+
+    }
+
+ 
+   .dashboard{
+       position: fixed;
+        height: 100vh;
+        z-index: 1000;
+         width: calc((2 / 6) * (100% - 2%))
+   }
+  .mainContent{
+      grid-column: 2 / 3; 
+  } 
+   .logOut{ 
+     top: 1%;
+  } 
+      .contentContainer{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'images'
+        'cards';
+        width: 100%;
+        gap: 0%;
+        padding: 4% 0% 10% 0%;
+    }
+    .images{
+       grid-area: images;
+        width: 95%;
+        height: 300px;
+       }
+ 
+    .mainContent .text{
+       margin-top: 80px; 
+       margin-bottom: 1%;
+       padding: 0%;
+       width: 100%;
+    }
+     .cards{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 180px);
+      grid-area: cards;
+     }
+     .cards .card{
+          margin-bottom: 0%;
+     }
+
+    } 

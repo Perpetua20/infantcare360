@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+  cursor: pointer;
+}
+body{
+     background-color: rgb(239, 238, 238);
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 5%;
+}
+.dashboard{
+       position: relative;
+       background-color:rgb(31, 31, 98);
+       display: flex;
+       flex-direction: column; 
+       justify-content: center;
+       height: 100vh;
+}
+.logo-part{
+     position: absolute;
+     top: 2%;
+     width: 100%;
+     display: flex;
+     left: 4%;
+}
+.logo-part .logo{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: rgb(233, 231, 231);
+}
+.logo-part img{
+     width: 50px;
+     height: 50px; 
+     border-radius: 50%;
+}
+.logo-part i{
+    display: none;
+}
+.dashboard .features li{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 25px 0px 20px 25px;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    position: relative;
+}
+.dashboard .features li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background-color: #495057;
+}
+.dashboard .features li a{
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+ 
+}
+.dashboard .features li i{
+    color: white;
+    font-size: 20px;
+}
+.dashboard .features li:hover {
+    background-color: #2f3e78;
+    border-left: 5px solid #4f6eef; 
+    padding-left: 20px; 
+    cursor: pointer;
+}
+.dashboard .features .caregivers{
+     background-color: #2f3e78;
+}
+.dashboard .dashboardLogOut{
+    display: none;
+}
+.mainContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+
+}
+.mainContent .text{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: rgb(98, 98, 98);
+}
+.mainContent .text h1{
+    color: rgb(0, 0, 139);
+}
+.logOut{
+    position: absolute;
+    right: 5%;
+    top: 1%;
+}
+.logOut button{
+      padding: 8px 35px;
+      border-radius: 30px;
+      border: none;
+      background-color: #a80303;
+      color: rgb(226, 226, 226);
+      cursor: pointer;
+}
+.mainContent .logOut button:hover{
+  background-color: rgb(0, 0, 139);
+}
+
+.linksContainer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: white;
+    width: 97%;
+    color: rgb(98, 98, 98);
+    border-radius: 10px;
+
+}
+.upcomingCon,
+.overdueCon,
+.pastCon,
+.pendingCon,
+.canceledCon {
+  display: none;
+}
+.linksContainer p{
+    display: flex;
+    gap: 8%;
+}
+.linksContainer .activeLink{
+    background-color:  rgb(0, 0, 139);
+    padding: 10px;
+    color: rgb(225, 225, 225);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.linksContainer .pendingMeeting{
+    background-color:  rgb(0, 0, 139);
+    padding: 10px;
+    color: rgb(225, 225, 225);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.linksContainer .upcomingMeeting, .overdueMeeting, .canceledMeeting{
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.linksContainer .pastMeeting{
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.linkDetailsContainer{
+    background-color: white;
+    margin: 2% 12% 2% 0%;
+    padding: 20px 20px 20px 20px;
+    color: rgb(86, 86, 86);
+    width: 97%;
+}
+.linkDetailsContainer  h2{
+     color: rgb(0, 0, 139);
+     text-align: center;
+}
+.linkDetailsContainer .pending , .linkDetailsContainer .upcoming, .linkDetailsContainer .overdue, .linkDetailsContainer .past, .linkDetailsContainer .canceled{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 3%;
+}
+
+.linkDetailsContainer  .card{
+      background-color: rgb(239, 249, 253);
+      padding: 12px;
+      line-height: 1.5;
+      border-radius: 10px;
+}
+.linkDetailsContainer .card button{
+     margin-top: 5%;
+     padding: 4px 10px;
+     background-color:  rgb(0, 0, 139);
+     border: none;
+     color: rgb(225, 225, 225);
+     border-radius: 8px;
+}
+.linkDetailsContainer .upcomingCon h2 , .pendingCon h2 , .pastCon h2 , .canceledCon h2 , .overdueCon h2{
+    text-align: start;
+    margin-bottom: 2%;
+}
+
+.linkDetailsContainer .upcomingCon{
+   display: none;
+}

@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     background-color: rgb(250, 250, 250);
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 5%;
+}
+.dashboard{
+       position: sticky;
+       top: 0; 
+       background-color:rgb(31, 31, 98);
+       display: flex;
+       flex-direction: column; 
+       justify-content: center;
+       height: 100vh;
+}
+.logo-part{
+     position: absolute;
+     top: 2%;
+     width: 100%;
+     display: flex;
+     left: 4%;
+}
+.logo-part .logo{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: rgb(233, 231, 231);
+}
+.logo-part img{
+     width: 50px;
+     height: 50px; 
+     border-radius: 50%;
+}
+.logo-part i{
+    display: none;
+}
+.dashboard .features li {
+    list-style: none;
+    padding: 0px; 
+    display: flex;
+    gap: 0;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    position: relative;
+}
+.dashboard .features .home ,.dashboard .features .infantProfile, .dashboard .features .consult{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+}
+.dashboard .features li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background-color: #495057;
+}
+.dashboard .features li a{
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+ 
+}
+.dashboard .features li .link1, .dashboard .features li .link2 {
+    margin-left: 8%;
+}
+.dashboard .features li i{
+    color: white;
+    font-size: 20px;
+}
+.dashboard .features li:hover {
+    background-color: #2f3e78;
+    border-left: 5px solid #4f6eef; 
+    cursor: pointer;
+}
+.dashboard .features .vaccine{
+     background-color: #2f3e78;
+}
+.dashboard .features .vaccine.active{
+     background-color:rgb(31, 31, 98);
+}
+.dashboard .dashboardLogOut{
+    display: none;
+}
+
+/* ---------- SIDEBAR DROPDOWN STYLES ---------- */
+.menu-item {
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .features li a,
+.menu-item .menu-header {
+    padding: 20px 14px 20px 14px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.menu-item .menu-header {
+    background-color: transparent; 
+    display: flex;
+    padding-left: 0%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-header span,
+.menu-header a {
+    color: rgb(222, 222, 222);
+    text-decoration: none;
+}
+
+.menu-item .arrow {
+    transition: transform 0.3s ease;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #2f3e78;
+    transition: max-height 0.35s ease;
+}
+
+.submenu li {
+    padding: 2px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+    margin-left: 19%;
+}
+
+.dashboard .features .submenu li:hover {
+    background-color: #5e0101;
+}
+
+.menu-item.open .submenu {
+    max-height: 400px;
+}
+
+.menu-item.open .arrow {
+    transform: rotate(180deg);
+}
+
+
+.mainContent{
+    position: relative;
+}
+
+.mainContent .header{
+      background-color: white;
+      margin-top: 1.5%;
+      margin-right: 2%;
+      padding: 6px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+}
+.mainContent .header .text{
+    width: 50%;
+    line-height: 1.5;
+     color: rgb(98, 98, 98);
+}
+.mainContent .header .text p{
+    margin-left: 0.5%;
+}
+.mainContent .header .text h1{
+       color: rgb(0, 0, 139);
+}
+.mainContent .header .profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5; 
+  
+}
+.mainContent .header .profile a{
+  text-decoration: none;
+}
+.mainContent .header img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+   
+}
+.mainContent .historyContainer{
+    margin-top: 1.5%;
+    padding-bottom: 1.75%;
+}
+.topCards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5%;
+    padding: 0px 50px 0px  25px;
+}
+.topCards .card{
+    display: flex;
+    gap: 15px;
+    padding: 3% 4% 6% 4%;
+    line-height: 1.3;
+    border-radius: 10px;
+    color: rgb(237, 236, 236);
+}
+.topCards .card .text h4{
+      color: white;
+       margin-bottom: 5%;
+}
+.topCards .card i{
+    font-size: 40px;
+    margin-right: 10px;
+    color: rgb(222, 220, 220);
+}
+
+ .topCards .card1{
+    background-color: rgba(170, 112, 4, 0.9);
+}
+.progressBar{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(220, 220, 220);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+ .progressBar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background-color: var(--progress-color, rgb(2, 157, 2)); 
+  border-radius: 20px;
+  width: var(--progress-width, 0%);
+  transition: width 0.8s ease-in-out, background-color 0.5s ease-in-out;
+}
+.topCards .card2{
+    background-color: rgba(52, 157, 52,0.9);
+}
+.topCards .card h4{
+    margin-bottom: 1px;
+}
+.topCards .card3{
+    background-color: rgba(195, 50, 50,0.9);
+}
+.vaccineHistoryContainer{
+          padding: 0px 50px 13px  25px;
+        
+}
+.vaccineHistoryContainer h3{
+    background-color: rgb(31, 31, 98);
+    width: 25%;
+    padding: 8px;
+    margin-bottom: 2%;
+    color: rgb(231, 230, 230);
+    text-align: center;
+    border-radius: 10px;
+}
+.vaccineHistory{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2 ,minmax(100px, 180px));
+    gap: 5%;
+}
+.vaccineHistory .card{
+    background-color: white;
+    padding: 4%;
+    border-radius: 10px;
+     color: rgb(85, 85, 85);
+}
+.vaccineHistory .card h4{
+    color: rgb(0, 0, 139);
+    margin-bottom: 5%;
+}
+.vaccineHistory .card .date{
+      
+     color: rgb(29, 28, 28);
+}
+.vaccineHistory .card .lastText{
+    margin-bottom: 1.5%;
+}
+
+/*===================MEDIA QUERIES=======================*/
+@media (max-width: 600px){
+            section {
+                grid-template-columns: 1fr;
+
+         }
+         .logo{
+            display: flex;
+            align-items: center;
+         }
+      .logo-part{
+        position: fixed;
+        top: 0;
+       left: 0; 
+       justify-content: space-between;
+       align-items: center;
+       padding: 3% 5% 3% 2%;
+       background-color:rgb(31, 31, 98);
+       z-index: 100000;
+    } 
+      .logo-part h3{
+        font-size: medium;
+    }
+    .logo-part img{
+        height: 35px;
+        width: 35px;
+    }  
+    .logo-part i{
+         display: block;
+         color: white;
+          font-size: 30px;
+      } 
+      .dashboard{
+        position: relative;
+        height: 8vh;
+      }
+     .dashboard .dashboardLogOut {
+           display: block;
+           position: fixed; 
+           bottom: 4%;
+           left: -50%;
+           transform: translateX(-50%);
+           z-index: 10001; 
+           transition: left 0.3s ease-in-out;
+       }
+      .dashboard .dashboardLogOut button{
+            padding: 8px 35px;
+            border-radius: 30px;
+            border: none;
+            background-color: #a80303;
+            color: rgb(226, 226, 226);
+            cursor: pointer; 
+      }
+
+ 
+        .dashboard .features {
+            position: fixed; 
+            width: 100%;
+            top: 8%;
+            padding-top: 18%;
+            background-color: rgb(31, 31, 98);
+            transition: left 0.3s ease-in-out;
+            left: -100%;
+            height: calc(100vh - 8%);
+            z-index: 10000;
+    } 
+        .dashboard .features li {
+        padding: 15px 0px 20px 15px;
+    }
+    .dashboard .features .vaccine{
+     grid-template-rows: 25px 0px;
+}
+.dashboard .features .vaccine .menu-header{
+    padding-left: 8px;
+ 
+ }
+      .mainContent .header{
+           margin: -8% 3% 10% 3%;
+           padding: 0px 0px;
+        }  
+        .mainContent .header .profile{
+            display: none;
+        }
+        .mainContent .header .text{
+            width: 100%;
+            padding: 2% 3%;
+            
+        }
+        .mainContent .header .text p{
+           font-size: normal;
+        }
+        .mainContent .header .text h1{
+            font-size: 25px;
+        }
+        .mainContent .historyContainer{
+         
+            margin-top: 5%;
+            padding-bottom: 1.75%;
+        }
+        .topCards{
+            grid-template-columns: 1fr;
+            gap: 5%;
+            padding: 0px;
+            margin-bottom: 10%;
+        }
+        .topCards .card{
+            display: flex;
+            gap: 15px;
+            padding: 2% 5% 6% 5%;
+            line-height: 1.3;
+            border-radius: 10px;
+            color: rgb(237, 236, 236);
+            width: 90%;
+            font-size: 15px;
+            margin: auto;
+        }
+        .topCards .card i{
+            font-size: 30px;
+        }
+           .vaccineHistoryContainer{
+            padding: 0px;
+            margin-top: 20%;
+            margin-bottom: 5%;
+         }
+          .vaccineHistoryContainer h3{
+            width: 80%;
+            margin: 8% auto;
+
+        }
+          .vaccineHistory{
+            grid-template-columns: 1fr; 
+            grid-template-rows: repeat(6,180px);  
+            gap: 1px;
+        }
+         .vaccineHistory .card{
+            width: 90%;
+            font-size: 15px;
+            margin: auto;
+         }
+}
+

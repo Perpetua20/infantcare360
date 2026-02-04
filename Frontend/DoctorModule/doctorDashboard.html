@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard - InfantCare360</title>
+  <link rel="stylesheet" href="../AdminModule/adminDashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <section>
+    <!-- Sidebar -->
+    <div class="dashboard">
+      <div class="logo-part">
+        <div class="logo">
+          <img src="../Images/infantCareLogo.png" alt="">
+          <h3>InfantCare360</h3>
+        </div>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="features">
+        <li class="home"><i class="fa-solid fa-grip dashboardIcon"></i> <a href="#" class="link1">Dashboard</a></li>
+        <li class="infants"><i class="fa-solid fa-baby"></i><a href="./manageInfants.html" class="link2">Infants</a></li>
+        <li class="vaccinations"><i class="fa-solid fa-syringe"></i><a href="./vaccinationManagement.html" class="link2">Vaccination Management</a></li>
+        <li class="consultations"><i class="fa-solid fa-video"></i><a href="./telehealthManagement.html" class="link2">Telehealth Consultations</a></li>
+       
+
+        <div class="dashboardLogOut">
+          <button id="logoutBtn" class="logoutBtn">Log Out</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="mainContent">
+      <div class="logOut">
+        <button id="logoutBtnTop" class="logoutBtn">Log Out</button>
+      </div>
+
+      <div class="text">
+       
+        <h1 id="welcomeText">Hello, Doctor</h1>
+        <h2>Welcome to InfantCare360 Dashboard</h2>
+        <p>Manage your infants, vaccinations, and telehealth appointments from here.</p>
+      </div>    
+
+      <div class="contentContainer">
+        <h3 class="cardsTitle">Quick overview of your assigned infants and activities</h3>
+
+        <div class="cards">
+          <div class="card">
+            <p class="icon"><i class="fa-solid fa-baby"></i></p>
+            <h3>Total Infants</h3>
+            <p class="count" id="totalInfants">0</p>
+            <p>Infants under your care</p>
+          </div>
+
+          <div class="card">
+            <p class="icon"><i class="fa-solid fa-syringe"></i></p>
+            <h3>Upcoming Vaccinations</h3>
+            <p class="count" id="upcomingVaccinations">0</p>
+            <p>Vaccines due in the next 7 days</p>
+          </div>
+
+          <div class="card">
+            <p class="icon"><i class="fa-solid fa-circle-check"></i></p>
+            <h3>Completed Vaccinations</h3>
+            <p class="count" id="completedVaccinations">0</p>
+            <p>Vaccinations administered in the last 7 days</p>
+          </div>
+
+          <div class="card">
+            <p class="icon"><i class="fa-solid fa-video"></i></p>
+            <h3>Pending Consultations</h3>
+            <p class="count" id="pendingConsultations">0</p>
+            <p>Telehealth appointments awaiting approval</p>
+          </div>
+
+          <div class="card">
+            <p class="icon"><i class="fa-solid fa-calendar-days"></i></p>
+            <h3>Overdue Vaccinations</h3>
+            <p class="count" id="overdueVaccinations">0</p>
+            <p>Vaccines that are past due</p>
+          </div>
+
+          <div class="card">
+            <p class="icon"><i class="fa-solid fa-user-plus"></i></p>
+            <h3>New Infants Assigned</h3>
+            <p class="count" id="newInfantsAssigned">0</p>
+            <p>New infants added this week</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="doctorDashboard.js"></script>
+</body>
+</html>

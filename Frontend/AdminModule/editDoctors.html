@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Doctor | InfantCare360 Admin</title>
+  <link rel="stylesheet" href="addDoctors.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="container">
+   
+
+    <div class="doctorDetails">
+        <h2>Edit Doctor Details</h2>
+            <form id="editDoctorForm">
+      
+      <div class="form-group">
+        <label for="fullName">Full Name </label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter doctor's full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email </label>
+        <input type="email" id="email" name="email" placeholder="Enter doctor's email address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number </label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="license">Medical License Number</label>
+        <input type="text" id="license" name="license" placeholder="Enter license number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fee">Consultation Fee</label>
+        <input type="text" id="fee" name="fee" placeholder="Enter consultation fee">
+      </div>
+
+      <div class="form-group">
+        <label for="status">Account Status </label>
+        <select id="status" name="status" required>
+          <option value="Pending">Pending</option>
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
+      </div>
+
+      <div class="btnCon">
+              <button type="button" class="btn" id="cancelButton">Cancel</button>
+               <button type="submit" class="btn">Update Doctor</button>
+      </div>
+     
+    </form>
+    </div>
+  </div>
+
+  <script src="editDoctors.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     background-color: rgb(250, 250, 250);
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 5%;
+    position: relative;
+}
+.dashboard{
+       position: sticky;
+       top: 0; 
+       background-color:rgb(31, 31, 98);
+       display: flex;
+       flex-direction: column; 
+       justify-content: center;
+       height: 100vh;
+}
+.logo-part{
+     position: absolute;
+     top: 2%;
+     width: 100%;
+     display: flex;
+     left: 4%;
+}
+.logo-part .logo{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: rgb(233, 231, 231);
+}
+.logo-part img{
+     width: 50px;
+     height: 50px; 
+     border-radius: 50%;
+}
+.logo-part i{
+    display: none;
+}
+.dashboard .features li {
+    list-style: none;
+    padding: 0px; 
+    display: flex;
+    gap: 0;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    position: relative;
+}
+.dashboard .features .home ,.dashboard .features .infantProfile, .dashboard .features .consult{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+}
+.dashboard .features li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background-color: #495057;
+}
+.dashboard .features li a{
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+ 
+}
+.dashboard .features li .link1, .dashboard .features li .link2 {
+    margin-left: 8%;
+}
+.dashboard .features li i{
+    color: white;
+    font-size: 20px;
+}
+.dashboard .features li:hover {
+    background-color: #2f3e78;
+    border-left: 5px solid #4f6eef; 
+    cursor: pointer;
+}
+.dashboard .features .educate{
+     background-color: #2f3e78;
+}
+.dashboard .features .educate.active{
+     background-color:rgb(31, 31, 98);
+}
+.dashboard .dashboardLogOut{
+    display: none;
+}
+
+/* ---------- SIDEBAR DROPDOWN STYLES ---------- */
+.menu-item {
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .features li a,
+.menu-item .menu-header {
+    padding: 20px 14px 20px 14px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.menu-item .menu-header {
+    background-color: transparent; 
+    display: flex;
+    padding-left: 0%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-header span,
+.menu-header a {
+    color: rgb(222, 222, 222);
+    text-decoration: none;
+}
+
+.menu-item .arrow {
+    transition: transform 0.3s ease;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #2f3e78;
+    transition: max-height 0.35s ease;
+}
+
+.submenu li {
+    padding: 2px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: rgb(222, 222, 222);
+    margin-left: 19%;
+}
+
+.dashboard .features .submenu li:hover {
+    background-color: #5e0101;
+}
+
+.menu-item.open .submenu {
+    max-height: 400px;
+}
+
+.menu-item.open .arrow {
+    transform: rotate(180deg);
+}
+
+.logOut{
+    position: fixed;
+    right: 5%;
+    top: 3%;
+}
+.logOut button , .cta-btn{
+      padding: 8px 35px;
+      border-radius: 30px;
+      border: none;
+      background-color: #a80303;
+      color: rgb(226, 226, 226);
+      cursor: pointer;
+}
+.logOut button:hover, .cta-btn:hover{
+  background-color: rgb(0, 0, 139);
+}
+
+.introPart{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5%;
+    gap: 5%;
+    padding: 5% 3% 5% 0%;
+}
+.intro-text{
+    position: relative;
+}
+.text-part{
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    height: 100%;
+}
+.cta-btn{
+    position: absolute;
+    bottom: 15%;
+}
+.intro-image{
+   border-radius: 10px; 
+   height: 50vh;   
+   
+}
+.intro-image img{
+    width: 100%;
+   height: auto;
+     border-radius: 10px;  
+}
+#subtopics-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2%;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+#subtopics-container img{
+    width: 60px;
+  
+}
+#subtopics-container .card{
+    background-color: white;
+     text-align: center;
+     padding: 1px 30px;
+     width: 90%;
+     margin-top: 8%;
+     border-radius: 10px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     transition: all 0.2s ease-in-out;
+}
+.card:hover {
+    box-shadow: 0 6px 18px rgba(9, 53, 248, 0.15);
+    cursor: pointer;
+    transform: translateY(-10px); 
+}
+.card p{
+    text-align: start;
+}
+.card span, .card button{
+     display: block;
+    text-align: start; 
+}
+.card span{
+    margin-top: 2%;
+}
+.card button{
+    margin-top: 3%;
+    margin-bottom: 5%;
+     background-color: rgb(0, 0, 139);
+    border: none;
+    color: rgb(219, 219, 219);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card button:hover{
+    background-color: #a80303;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    min-height: 100vh;
+    background-color: rgb(250, 250, 250);
+    position: relative;
+    overflow-y: auto;
+      color: rgb(83, 83, 83);  
+}
+.contentContainer h1 , .contentContainer h3 , .contentContainer h2{
+    color: rgb(0, 0, 139);
+}
+.contentContainer h3{
+    margin-bottom: 10px;
+}
+
+.cta-text {
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+

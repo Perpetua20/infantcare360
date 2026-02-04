@@ -1,0 +1,119 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: rgb(233, 232, 232);
+}
+button{
+  cursor: pointer;
+}
+.container{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container h2{
+    margin-bottom: 5%;
+      color: rgb(7, 34, 239);
+}
+.doctorDetails{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    padding: 20px 10px 20px 30px;
+    color: #555454;
+}
+.form-group{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    gap: 5%;
+    margin-bottom: 2%;
+}
+.form-group input, select{
+     width: 95%;
+     height: 35px;
+    border: none;
+    outline: none;
+    padding-left: 2%;
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+    color: #555454;
+} 
+.btnCon{
+    width: 92%;
+    display: flex;
+    justify-content: end;
+    gap: 3%;
+}
+.btn{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+     background-color: rgb(7, 34, 239);
+     color: white;
+}
+.btn:hover{
+       background-color: rgb(3, 20, 140);
+}
+
+.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      backdrop-filter: blur(3px);
+      z-index: 10;
+}
+
+.spinner {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #0077b6;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 15px;
+}
+@keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+}
+.message {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 500;
+}
+.alert {
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: 500;
+}
+.alert-success {
+      background-color: #d4edda;
+      color: #155724;
+}
+.alert-danger {
+      background-color: #f8d7da;
+      color: #721c24;
+}
+
+body.swal2-shown {
+  overflow: visible !important;
+  height: 100vh !important; 
+}
+
+body.swal2-height-auto {
+  height: 100vh !important;
+}

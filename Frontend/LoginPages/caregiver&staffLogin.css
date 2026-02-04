@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.loginContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+}
+.errorMessage {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.imageDiv{
+     background-image: url('../Images/loginpageImage.png');
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     margin: 12% 0% 2% 25%;
+}
+
+.loginDetails{
+    margin: 1% 25% 0% 0%;
+    padding: 5% 9%;   
+}
+
+.topheading{
+    margin-bottom: 10%;
+}
+.topheading h1{
+     text-align: center;
+     color: rgb(2, 2, 130);
+     font-weight: bold;
+}
+.topheading p{
+    text-align: center;
+}
+.topheading .details{
+    margin-bottom: 10px;
+}
+
+.inputField {
+    width: 100%;
+    height: 35px;
+     margin-bottom: 5%;
+    border: 1px solid rgb(166, 164, 164);
+    margin-top: 2%;
+}
+.inputField:focus{
+     border: 3px solid rgb(166, 164, 164);
+       outline: none;   
+}
+
+.login{
+    margin: 5% 0% 5% 0%;
+    width: 100%;
+    height: 35px;
+    background-color: #003b75f8;
+    color: white;
+    border: none;
+}
+.login:hover{
+    background-color: rgb(2, 2, 179);
+    cursor: pointer;
+}
+.login-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+.login-links a{
+    text-decoration: none;
+     color: rgb(1, 1, 163);
+}
+.bottomLine{
+    border-top: 1px solid rgb(166, 164, 164);;
+    width: 78%;
+    margin: 5% auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.staffLine{
+    margin: 4% auto;
+}
+.bottomLine img{
+    width: 30px;
+    height: 30px;
+}
+
+/*=======================MEDIA QUERIES==========================*/
+@media (max-width: 600px) {
+    
+.loginContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+     grid-template-areas:
+         'imageDiv'
+         'loginDetails'
+         ;
+}
+.imageDiv{
+    grid-area: imageDiv;
+    margin: 12% 8% 0% 8%;
+    padding: 30% 2%;
+}
+.loginDetails{
+    grid-area: loginDetails;
+    margin: 0;
+    padding: 0% 9% 5% 9%; 
+}
+}

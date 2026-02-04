@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson</title>
+  <link rel="stylesheet" href="lesson.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<section class="container">
+
+  <!-- Dashboard -->
+
+  <section class="dashboard">
+    <div class="logo-part">
+      <div class="logo">
+        <img src="../Images/infantCareLogo.png" alt="">
+        <h3>InfantCare360</h3>
+      </div>
+      <i class="fa-solid fa-bars"></i>
+    </div>
+<div class="features">
+    <li class="home"><i class="fa-solid fa-grip dashboardIcon"></i> <a href="./caregiverDashboard.html" class="link1">Dashboard</a></li>
+    <li class="infantProfile"><i class="fa-solid fa-user infant"></i> <a href="./infantProfile.html" class="link2">Infant Profile</a></li>
+    
+<li class="menu-item vaccine">
+    <div class="menu-header">
+        <i class="fa-solid fa-syringe syringe"></i>
+        <span>Vaccination Tracking</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+    </div>
+
+    <ul class="submenu">
+        <li><a href="./vaccinationSchedule.html">Vaccination Schedule</a></li>
+        <li><a href="./vaccinationHistory.html">Vaccination History</a></li>
+    </ul>
+</li>
+
+<li class="menu-item educate">
+    <div class="menu-header">
+        <i class="fa-solid fa-book book"></i>
+        <span>Education Resources</span>
+        <i class="fa-solid fa-chevron-down arrow"></i>
+    </div>
+
+    <ul class="submenu">
+        <li><a href="education.html?topic=1">Breastfeeding</a></li>
+        <li><a href="education.html?topic=2">Infant Nutrition</a></li>
+        <li><a href="education.html?topic=3">Hygiene</a></li>
+        <li><a href="education.html?topic=4">Disease Prevention</a></li>
+    </ul>
+</li>
+
+    
+    <li class="consult"><i class="fa-solid fa-video video"></i><a href="./telehealthModule.html" class="link2">Telehealth Consultation</a></li>
+    
+    <div class="dashboardLogOut">
+        <button class="logoutBtn">Log Out</button>
+    </div>
+</div>
+  </section>
+
+  <!-- Main Lesson Content -->
+  <section class="mainContent">
+    <div class="logOut logoutBtn">
+      <button>Log Out</button>
+    </div>
+
+    <div id="lesson-content">
+      <div class="image">
+        <div class="Imagetext">
+          <h1 id="lesson-title"></h1>
+          <p id="lesson-subtitle"></p>
+        </div>
+      </div>
+
+      <div class="text">
+        <div id="lesson-text"></div>
+        <div id="lesson-videos"></div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div id="lesson-navigation" style="margin-top: 20px;">
+      <button id="topics-btn" class="nav-btn">◀ Back to Topics</button>
+      <button id="back-btn" class="nav-btn">◀ Previous Topic</button>
+      <button id="next-btn" class="nav-btn">Next Topic ▶</button>
+    </div>
+  </section>
+
+</section>
+
+<script src="lesson.js"></script>
+</body>
+</html>

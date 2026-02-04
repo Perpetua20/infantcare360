@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caregiver Registration | InfantCare360</title>
+<link rel="stylesheet" href="caregiverRegister.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  <div class="register-container">
+    <h2>Caregiver Registration</h2>
+   
+    <p id="serverError"></p>
+
+    <form id="caregiverRegisterForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="Enter your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="inviteCode">Invitation Code</label>
+      <input type="text" id="inviteCode" placeholder="Enter your invitation code" required />
+
+      <label for="password">Create Password</label>
+      <input type="password" id="password" placeholder="Create password" required />
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" placeholder="Confirm password" required />
+      <p class="error-message" id="passwordError">Passwords do not match.</p>
+      <p class="success-message" id="passwordMatch">✅ Passwords match!</p>
+
+      <button type="submit" class="btn">Register</button>
+    </form>
+
+    <p class="note">
+      Already have an account? <a href="../LoginPages/caregiverLogin.html">Login here</a>
+    </p>
+  </div>
+
+  <script src="caregiverRegister.js" defer></script>
+</body>
+</html>
